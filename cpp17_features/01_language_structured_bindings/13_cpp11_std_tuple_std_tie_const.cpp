@@ -19,7 +19,7 @@ int main()
 
 // ...
 
-double &x, &y, &z;              // COMPILE ERROR.
+double const x, y, z;              // COMPILE ERROR.
 point3d rp = std::tie(x, y, z);
 
 // end-sample
