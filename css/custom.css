@@ -1,0 +1,37 @@
+/* Mostly stolen from Louis. */
+
+/* Make sure code appearing in headers is not capitalized */
+.reveal h1 code, .reveal h2 code, .reveal h3 code, .reveal h4 code {
+    text-transform: none;
+}
+
+/* Make it possible to have two columns */
+.left {
+  //left:-8.33%;
+  //text-align: center;
+  float: left;
+  width: 50%;
+  //z-index:-10;
+}
+
+.right {
+  //top: 75px;
+  //left: 31.25%;
+  //text-align: center;
+  float: right;
+  width: 50%;
+  //z-index: -10;
+}
+
+/* Remove the border and the background from images */
+.reveal section img {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Force manually-highlighted code to be monospace */
+.hljs-override {
+  font-family: monospace;
+}
+
