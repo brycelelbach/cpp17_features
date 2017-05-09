@@ -1,6 +1,6 @@
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/00_cpp98_point3d_manual_value_semantics.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/00_cpp98_point3d_manual_value_semantics.cpp#primary'></code></pre>
 
 NOTES:
 The destructuring problem: how do we assign convenient names to the components of an object?
@@ -9,7 +9,7 @@ The destructuring problem: how do we assign convenient names to the components o
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/01_cpp98_point3d_manual_reference_semantics.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/01_cpp98_point3d_manual_reference_semantics.cpp#primary'></code></pre>
 
 NOTES:
 We may want those names to have reference semantics instead of value semantics, too!
@@ -18,7 +18,7 @@ We may want those names to have reference semantics instead of value semantics, 
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/10_cpp11_std_tuple_std_tie_value_semantics.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/10_cpp11_std_tuple_std_tie_value_semantics.cpp#primary'></code></pre>
 
 NOTES:
 Before C++17, the only way to do destructuring is with `std::tie`.
@@ -30,7 +30,7 @@ The variables need to be separately declared before they are `std::tie`'d.
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/11_cpp11_std_tuple_std_tie_repeated_name_bug.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/11_cpp11_std_tuple_std_tie_repeated_name_bug.cpp#primary'></code></pre>
 
 NOTES:
 More problems:
@@ -43,7 +43,7 @@ We'll get no error for this, and `x` will be left uninitialized.
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/12_cpp11_std_tuple_std_tie_reference_semantics.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/12_cpp11_std_tuple_std_tie_reference_semantics.cpp#primary'></code></pre>
 
 NOTES:
 More problems:
@@ -53,7 +53,7 @@ More problems:
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/13_cpp11_std_tuple_std_tie_const.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/13_cpp11_std_tuple_std_tie_const.cpp#primary'></code></pre>
 
 NOTES:
 More problems:
@@ -64,7 +64,7 @@ This pattern won't work with any types that aren't `DefaultConstructible`.
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/20_cpp11_point3d_and_std_array_std_tie.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/20_cpp11_point3d_and_std_array_std_tie.cpp#primary'></code></pre>
 
 NOTES:
 More problems:
@@ -75,7 +75,7 @@ If we have non-PODs or initialized PODs, the initialization is redundant. Consid
 
 <div class="slide-title">Structured Bindings</div>
 
-`auto [`<i><code>a, b, ...</code></i>`] = obj`;
+`auto [`<i><code>a, b, ...</code></i>`] = obj;`
 
 The type of `obj` must be `Destructurable`:
 * Either all non-static data members:
@@ -106,23 +106,21 @@ This will only display in the notes window.
 
 <div class="slide-title">Structured Bindings</div>
 
-<table>
+<table style="font-size: 18px;">
 <tr><td>`T a; std::tie(a) = obj`</td><td>`a` is a copy of `obj`'s first component.</td></tr>
+<tr style="height: 24px;"></tr>
+<tr><td style="font-family: monospace;">`auto`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`[a] = obj`</td><td>`a` is a copy of `obj`'s first component.</td></tr>
+<tr><td style="font-family: monospace;">`auto`&nbsp;`const`&nbsp;&nbsp;&nbsp;`[a] = obj`</td><td>`a` is a const copy of `obj`'s first component.</td></tr>
+<tr><td style="font-family: monospace;">`auto`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`&`&nbsp;&nbsp;`[a] = obj`</td><td>`a` is a reference to `obj`'s first component.</td></tr>
+<tr><td style="font-family: monospace;">`auto`&nbsp;`const&`&nbsp;&nbsp;`[a] = obj`</td><td>`a` is a const reference to `obj`'s first component.</td></tr>
+<tr><td style="font-family: monospace;">`auto`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`&&`&nbsp;`[a] = obj`</td><td>`a` is a forwarding reference to `obj`'s first component.</td></tr>
 </table>
 
-<table>
-<tr><td>`auto         [a] = obj`</td><td>`a` is a copy of `obj`'s first component.</td></tr>
-<tr><td>`auto const   [a] = obj`</td><td>`a` is a const copy of `obj`'s first component.</td></tr>
-<tr><td>`auto      &  [a] = obj`</td><td>`a` is a reference to `obj`'s first component.</td></tr>
-<tr><td>`auto const&  [a] = obj`</td><td>`a` is a const reference to `obj`'s first component.</td></tr>
-<tr><td>`auto      && [a] = obj`</td><td>`a` is a forwarding reference to `obj`'s first component.</td></tr>
-</table>
-
 ---
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/30_cpp17_point3d_std_array_and_std_tuple_structured_bindings_value_semantics.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/30_cpp17_point3d_std_array_and_std_tuple_structured_bindings_value_semantics.cpp#primary'></code></pre>
 
 NOTES:
 
@@ -130,7 +128,7 @@ NOTES:
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/31_cpp17_point3d_structured_bindings_reference_semantics.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/31_cpp17_point3d_structured_bindings_reference_semantics.cpp#primary'></code></pre>
 
 NOTES:
 
@@ -138,7 +136,7 @@ NOTES:
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/32_cpp17_point3d_structured_bindings_const.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/32_cpp17_point3d_structured_bindings_const.cpp#primary'></code></pre>
 
 NOTES:
 
@@ -146,7 +144,7 @@ NOTES:
 
 <div class="slide-title">Structured Bindings</div>
 
-<pre><code class='sample' sample='cpp17_features/01_language_structured_bindings/40_cpp17_std_map_iteration_with_structured_bindings.cpp#primary'></code></pre>
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/01_language_structured_bindings/40_cpp17_std_map_iteration_with_structured_bindings.cpp#primary'></code></pre>
 
 NOTES:
 

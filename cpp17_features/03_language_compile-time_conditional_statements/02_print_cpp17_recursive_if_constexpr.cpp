@@ -2,7 +2,7 @@
 template <typename T0, typename... Ts> 
 void print(T0&& t0, Ts&&... ts)
 {
-  std::cout << t0 << std::endl;
+  std::cout << std::forward<T0>(t0) << std::endl;
 
   if constexpr (sizeof...(ts)) 
     print(std::forward<T0>(ts)...);
