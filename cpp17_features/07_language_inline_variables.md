@@ -21,7 +21,6 @@ NOTES:
   * Has the same address in every translation unit. 
 
 A `static constexpr` member variable is implicitly `inline`.
-</div>
 
 NOTES:
 

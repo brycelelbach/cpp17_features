@@ -24,7 +24,14 @@ Also:
 <p style="font-size: 18px;">
 [Arthur O'Dwyer](https://github.com/accuBayArea/Slides/blob/master/slides/2017-04-19.pdf),
 [Jonas Devlieghere](https://jonasdevlieghere.com/guaranteed-copy-elision/),
-Louis Dionne
+Louis Dionne,
+</p>
+
+<p style="font-size: 18px;">
+[Francisco Lopes](http://nosubstance.me/articles/2014-02-16-on-value-semantics/),
+[Marius Bancila](http://mariusbancila.ro/blog/2016/11/25/new-standard-library-features-in-visual-c-2017-rc/)
+<!-- http://en.cppreference.com/w/cpp/utility/variant/visit -->
+[cppreference.com](http://cppreference.com)
 </p>
 </i>
 
@@ -61,8 +68,8 @@ __**Language Changes**__
 __**Library Changes**__
 
 <ul style="font-size: 18px;">
-<li><b>`optional<>`</b></li>                                        <!-- ??? -->
-<li><b>`variant<>`</b></li>                                         <!-- ??? -->
+<li><b>`optional`</b></li>                                          <!-- ??? -->
+<li><b>`variant`</b></li>                                           <!-- ??? -->
 <li><b>`any`</b></li>                                               <!-- ??? -->
 <li><b>`string_view`</b></li>                                       <!-- ??? -->
 <li><b>Parallel algorithms</b></li>                                 <!-- ??? -->

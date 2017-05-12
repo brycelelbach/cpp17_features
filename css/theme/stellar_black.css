@@ -177,6 +177,8 @@ body {
 
 .reveal table {
   margin: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
   border-collapse: collapse;
   border-spacing: 0; }
 
