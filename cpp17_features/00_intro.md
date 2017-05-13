@@ -1,4 +1,5 @@
 # C++17 Features 
+### An introduction to C++17 via inspiring examples
 
 <p style="font-size: 24px;">
 **Bryce Adelstein Lelbach &lt;[bryce@cppnow.org](mailto:bryce@cppnow.org)&gt;**</small>
@@ -29,14 +30,13 @@ Louis Dionne,
 
 <p style="font-size: 18px;">
 [Francisco Lopes](http://nosubstance.me/articles/2014-02-16-on-value-semantics/),
-[Marius Bancila](http://mariusbancila.ro/blog/2016/11/25/new-standard-library-features-in-visual-c-2017-rc/)
+[Marius Bancila](http://mariusbancila.ro/blog/2016/11/25/new-standard-library-features-in-visual-c-2017-rc/),
 <!-- http://en.cppreference.com/w/cpp/utility/variant/visit -->
 [cppreference.com](http://cppreference.com)
 </p>
 </i>
 
 NOTES:
-This will only display in the notes window.
 
 ---
 
@@ -68,17 +68,17 @@ __**Language Changes**__
 __**Library Changes**__
 
 <ul style="font-size: 18px;">
+<li><b>`string_view`</b></li>                                       <!-- ??? -->
 <li><b>`optional`</b></li>                                          <!-- ??? -->
 <li><b>`variant`</b></li>                                           <!-- ??? -->
 <li><b>`any`</b></li>                                               <!-- ??? -->
-<li><b>`string_view`</b></li>                                       <!-- ??? -->
 <li><b>Parallel algorithms</b></li>                                 <!-- ??? -->
-<li>New algorithms: `search`, raw memory utilities, ...</li>        <!-- ??? -->
+<li>New algorithms</li>                                             <!-- `search`, `sample`, `clamp`, `uninitialized_*` -->
 <li><b>Filesystem support</b></li>                                  <!-- ??? -->
 <li><b>Polymorphic allocators and memory resources</b></li>         <!-- ??? -->
 <li>Aligned `new`</li>                                              <!-- ??? -->
 <li>Splicing and improved insertion for associative containers</li> <!-- ??? -->
-<li><b>Math special functions</b></li>                              <!-- ??? -->
+<li>Math special functions</li>                                     <!-- ??? -->
 <!-- <li>`Callable` invocation facilities</li> -->                          <!-- `invoke`, `apply` and `is_callable<>` -->
 <li>Variable templates for metafunctions</li>                       <!-- `*_v<>` -->
 <li>Boolean logic metafunctions</li>                                <!-- `conjunction<>`, `disjunction<>` and `negation<>` -->

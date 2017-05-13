@@ -92,7 +92,7 @@ NOTES:
 
 <div class="slide-title">Structured Bindings</div>
 
-`auto [`<i><code>a, b, ...</code></i>`] = obj`;
+`auto [`<i><code>a, b, ...</code></i>`] = obj;`
 
 `Destructurable` types in the standard library:
 * `std::array<>`
