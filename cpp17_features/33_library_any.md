@@ -1,4 +1,4 @@
-<div class="slide-title">`variant`</div>
+<div class="slide-title">`any`</div>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
 33_library_any
@@ -8,11 +8,11 @@
 '></code></pre>
 
 NOTES:
-What do we do if we need a variant, but we don't know the types at compile time?
+What do we do if we need a any, but we don't know the types at compile time?
 
 ---
 
-<div class="slide-title">`variant`</div>
+<div class="slide-title">`any`</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
@@ -32,7 +32,7 @@ NOTES:
 
 ---
 
-<div class="slide-title">`variant`</div>
+<div class="slide-title">`any`</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
@@ -53,7 +53,7 @@ Manual memory management is bad!
 
 ---
 
-<div class="slide-title">`variant`</div>
+<div class="slide-title">`any`</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
@@ -73,7 +73,7 @@ NOTES:
 
 ---
 
-<div class="slide-title">`variant`</div>
+<div class="slide-title">`any`</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
@@ -126,7 +126,7 @@ NOTES:
 
 ---
 
-<div class="slide-title">`variant`</div>
+<div class="slide-title">`any`</div>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
 33_library_any

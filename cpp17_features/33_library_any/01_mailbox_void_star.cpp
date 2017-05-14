@@ -24,12 +24,12 @@ struct mailbox
 
     std::unique_ptr up(reinterpret_cast<T>(ptr_));
 
+
     if (up)
       return std::move(up.get());
     else
       return T{};
   }
-
 
  private:
   std::mutex mtx_;

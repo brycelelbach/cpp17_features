@@ -32,7 +32,13 @@ Louis Dionne,
 [Francisco Lopes](http://nosubstance.me/articles/2014-02-16-on-value-semantics/),
 [Marius Bancila](http://mariusbancila.ro/blog/2016/11/25/new-standard-library-features-in-visual-c-2017-rc/),
 <!-- http://en.cppreference.com/w/cpp/utility/variant/visit -->
-[cppreference.com](http://cppreference.com)
+<!-- http://en.cppreference.com/w/cpp/container/unordered_map/extract -->
+[cppreference.com](http://cppreference.com),
+</p>
+
+<p style="font-size: 18px;">
+<!-- https://youtu.be/p32owQE_5u0 (std::clamp) -->
+[Jason Turner](http://articles.emptycrate.com/)
 </p>
 </i>
 
@@ -73,11 +79,11 @@ __**Library Changes**__
 <li><b>`variant`</b></li>                                           <!-- ??? -->
 <li><b>`any`</b></li>                                               <!-- ??? -->
 <li><b>Parallel algorithms</b></li>                                 <!-- ??? -->
-<li>New algorithms</li>                                             <!-- `search`, `sample`, `clamp`, `uninitialized_*` -->
+<li>New algorithms</li>                                             <!-- `search`, `sample`, `clamp`  -->
 <li><b>Filesystem support</b></li>                                  <!-- ??? -->
 <li><b>Polymorphic allocators and memory resources</b></li>         <!-- ??? -->
 <li>Aligned `new`</li>                                              <!-- ??? -->
-<li>Splicing and improved insertion for associative containers</li> <!-- ??? -->
+<li>Improved insertion and splicing for associative containers</li> <!-- ??? -->
 <li>Math special functions</li>                                     <!-- ??? -->
 <!-- <li>`Callable` invocation facilities</li> -->                          <!-- `invoke`, `apply` and `is_callable<>` -->
 <li>Variable templates for metafunctions</li>                       <!-- `*_v<>` -->
