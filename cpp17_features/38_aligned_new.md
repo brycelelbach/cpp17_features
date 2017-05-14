@@ -50,6 +50,18 @@ NOTES:
 
 <div class="slide-title">Aligned `new`</div>
 
+<pre style="display: inline-block;">
+<code>
+void* operator new(std::size_t, std::align_val_t);
+void* operator new[](std::size_t, std::align_val_t);
+void operator delete(void*, std::align_val_t);
+void operator delete[](void*, std::align_val_t);
+void operator delete(void*, std::align_val_t, std::size_t);
+void operator delete[](void*, std::align_val_t, std::size_t);
+</code>
+</pre>
+
+<!--
 <span style="font-size: 24px; font-family: monospace; display: block;">
 `void* operator new(std::size_t, std::align_val_t);`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span>
@@ -68,6 +80,7 @@ NOTES:
 <span style="font-size: 24px; font-family: monospace; display: block;">
 `void operator delete[](void*, std::align_val_t, std::size_t);`
 </span>
+-->
 
 * `#include <aligned_new>`
 * Alignment-aware global `new`.

@@ -771,7 +771,7 @@ Renderer.prototype.code = function(code, lang, escaped) {
   }
 
   if (!lang) {
-    return '<pre><code class="cpp">'
+    return '<pre><code class="language-cpp cpp">'
       + (escaped ? code : escape(code, true))
       + '\n</code></pre>';
   }
@@ -855,7 +855,7 @@ Renderer.prototype.em = function(text) {
 };
 
 Renderer.prototype.codespan = function(text) {
-  return '<code class="cpp">' + text + '</code>';
+  return '<code class="language-cpp">' + text + '</code>';
 };
 
 Renderer.prototype.br = function() {
