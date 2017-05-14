@@ -157,7 +157,7 @@ NOTES:
 31_library_optional
 /
 20_slice_optional_arguments.cpp
-#left
+#primary
 '></code></pre>
 
 NOTES:
