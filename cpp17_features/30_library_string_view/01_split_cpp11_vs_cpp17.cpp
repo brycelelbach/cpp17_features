@@ -8,10 +8,11 @@
 namespace left
 {
 
-                                                   // For width
+                                             // For width
 // sample(left)
-std::vector<std::string>                           
-split(std::string const& s, std::regex const& r)
+std::vector<std::string>                     
+split(std::string const& s,
+      std::regex const& r)
 {
   using iterator = std::regex_token_iterator<
       std::string::const_iterator
@@ -38,10 +39,11 @@ split(std::string const& s, std::regex const& r)
 namespace right
 {
 
-                                                   // For width
+                                             // For width
 // sample(right)
-std::vector<std::string_view>                      
-split(std::string_view s, std::regex const& r)
+std::vector<std::string_view>                
+split(std::string_view s,
+      std::regex const& r)
 {
   using iterator = std::regex_token_iterator<
       std::string_view::const_iterator
@@ -55,7 +57,8 @@ split(std::string_view s, std::regex const& r)
     std::back_inserter(v),
     [] (auto m)
     {
-      return std::string_view(m.first, m.length());
+      return std::string_view(m.first,
+                              m.length());
     }
   );
 

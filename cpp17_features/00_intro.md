@@ -7,7 +7,7 @@
 
 <i>
 <p style="font-size: 18px;">
-Also:
+Material from:
 </p>
 
 <p style="font-size: 18px;">
@@ -25,12 +25,13 @@ Also:
 <p style="font-size: 18px;">
 [Arthur O'Dwyer](https://github.com/accuBayArea/Slides/blob/master/slides/2017-04-19.pdf),
 [Jonas Devlieghere](https://jonasdevlieghere.com/guaranteed-copy-elision/),
-Louis Dionne,
+[Louis Dionne](http://ldionne.com/),
 </p>
 
 <p style="font-size: 18px;">
 [Francisco Lopes](http://nosubstance.me/articles/2014-02-16-on-value-semantics/),
 [Marius Bancila](http://mariusbancila.ro/blog/2016/11/25/new-standard-library-features-in-visual-c-2017-rc/),
+<!-- http://en.cppreference.com/w/cpp/language/class_template_deduction -->
 <!-- http://en.cppreference.com/w/cpp/utility/variant/visit -->
 <!-- http://en.cppreference.com/w/cpp/container/unordered_map/extract -->
 [cppreference.com](http://cppreference.com),
@@ -38,7 +39,8 @@ Louis Dionne,
 
 <p style="font-size: 18px;">
 <!-- https://youtu.be/p32owQE_5u0 (std::clamp) -->
-[Jason Turner](http://articles.emptycrate.com/)
+[Jason Turner](http://articles.emptycrate.com/),
+[Simon Brand](https://blog.tartanllama.xyz/c++/2017/01/11/deduction-for-class-templates/)
 </p>
 </i>
 
