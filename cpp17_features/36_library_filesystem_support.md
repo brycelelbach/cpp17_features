@@ -1,7 +1,7 @@
 <div class="slide-title">Filesystem Support</div>
 
 <div class="left">
-<span style="display: block">__**Before (Windows API)**__</span>
+<span style="display: block">__**Before (Windows)**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
 36_library_filesystem_support
@@ -21,7 +21,7 @@ NOTES:
 <div class="slide-title">Filesystem Support</div>
 
 <div class="left">
-<span style="display: block">__**Before (Windows API)**__</span>
+<span style="display: block">__**Before (Windows)**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
 36_library_filesystem_support

@@ -23,7 +23,7 @@ Material from:
 </p>
 
 <p style="font-size: 18px;">
-[Arthur O'Dwyer](https://github.com/accuBayArea/Slides/blob/master/slides/2017-04-19.pdf),
+[Arthur O'Dwyer](https://github.com/accuBayArea/Slides/raw/master/slides/2017-04-19.pdf),
 [Jonas Devlieghere](https://jonasdevlieghere.com/guaranteed-copy-elision/),
 [Louis Dionne](http://ldionne.com/),
 </p>
