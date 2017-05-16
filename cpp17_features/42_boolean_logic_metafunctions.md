@@ -15,6 +15,9 @@
 </div>
 
 NOTES:
+Suppose we want to write an `all_integral` type trait, which is true if all
+the elements of a parameter pack are integral and false otherwise.
+
 These patterns are commonly encountered when SFINAE'ing on parameter packs.
 
 ---
@@ -44,9 +47,10 @@ These patterns are commonly encountered when SFINAE'ing on parameter packs.
 </div>
 
 NOTES:
-We could write a simpler implementation using fold expressions. However, this
-approach will instantiate T::value for every element of the pack (e.g.  no
-short circuiting).
+We could write a simple implementation using fold expressions.
+
+However, this approach will instantiate T::value for every element of the pack
+(e.g.  no short circuiting).
 
 ---
 
@@ -75,6 +79,8 @@ short circuiting).
 </div>
 
 NOTES:
+C++17 adds three boolean logic metafunctions that are lazily evaluated to help
+you write this type of code.
 
 ---
 
@@ -82,27 +88,29 @@ NOTES:
 
 <table style="font-size: 18px;">
 <tr>
-  <td style="font-family: monospace;">`std::bool_constant<B>`</td>
-  <td style="font-family: monospace;">`std::integral_constant<bool, B>`</td>
+  <td style="font-family: monospace;"><code style="font-size: 24px;">std::bool_constant&lt;B&gt;</code></td>
+  <td style="font-family: monospace;"><code style="font-size: 24px;">std::integral_constant&lt;bool, B&gt;</code></td>
 </tr>
 <tr>
-  <td style="font-family: monospace;">`std::conjunction<Ts...>`</td>
-  <td style="font-family: monospace;">`std::bool_constant<(... && Ts::value)>`</td>
+  <td style="font-family: monospace;"><code style="font-size: 24px;">std::conjunction&lt;Ts...&gt;</code></td>
+  <td style="font-family: monospace;"><code style="font-size: 24px;">std::bool_constant&lt;(... && Ts::value)&gt;</code></td>
 </tr>
 <tr>
-  <td style="font-family: monospace;">`std::disjunction<Ts...>`</td>
-  <td style="font-family: monospace;">`std::bool_constant<(... || Ts::value)>`</td>
+  <td style="font-family: monospace;"><code style="font-size: 24px;">std::disjunction&lt;Ts...&gt;</code></td>
+  <td style="font-family: monospace;"><code style="font-size: 24px;">std::bool_constant&lt;(... || Ts::value)&gt;</code></td>
 </tr>
 <tr>
-  <td style="font-family: monospace;">`std::negation<T>`</td>
-  <td style="font-family: monospace;">`std::bool_constant<!T::value>`</td>
+  <td style="font-family: monospace;"><code style="font-size: 24px;">std::negation&lt;T&gt;</code></td>
+  <td style="font-family: monospace;"><code style="font-size: 24px;">std::bool_constant&lt;!T::value&gt;</code></td>
 </tr>
 </table>
 
 * `#include <type_traits>`
 * Boolean logic metafunctions.
-* `std::conjunction` and `std::disjunction` are short-circuited.
+* Lazily evaluated.
+  * E.g. `std::conjunction` and `std::disjunction` are short-circuited.
 * `*_t` and `*_v` aliases are also defined.
 
 NOTES:
+{READ FROM SLIDE}
 

@@ -1,3 +1,5 @@
+<!--
+
 <div class="slide-title">Improved Insertion and Splicing for Associative Containers</div>
 
 <div class="left">
@@ -13,11 +15,6 @@
 
 <div class="right">
 </div>
-
-NOTES:
-`map`, `multimap`, `unordered_map` and `unordered_multimap` now have `try_emplace` and `insert_or_assign`.
-
----
 
 <div class="slide-title">Improved Insertion and Splicing for Associative Containers</div>
 
@@ -35,9 +32,7 @@ NOTES:
 <div class="right">
 </div>
 
-NOTES:
-
----
+-->
 
 <div class="slide-title">Improved Insertion and Splicing for Associative Containers</div>
 
@@ -64,6 +59,9 @@ NOTES:
 </div>
 
 NOTES:
+`map`, `multimap`, `unordered_map` and `unordered_multimap` now have `try_emplace` and `insert_or_assign`.
+
+These interfaces make it easier to deal with operations on maps that access existing keys.
 
 ---
 
@@ -79,10 +77,9 @@ NOTES:
 '></code></pre>
 
 NOTES:
+All the associative containers now have `merge`.
 
-Doesn't overwrite existing keys.
-
-All the associative containers have `merge`.
+`merge` doesn't overwrite existing keys.
 
 `O(source.size()*log(size()+source.size())` for map/multimap/set/multiset.
 
@@ -100,4 +97,7 @@ Average `O(source.size())`, worst case `O(source.size()*size()+source().size())`
 '></code></pre>
 
 NOTES:
+Also, associative containers now have node-based insertion and extraction interfaces.
+
+These allow you to extract internal nodes from associative containers and insert them into other associative containers.
 

@@ -1,6 +1,6 @@
-                                                     // For width
+                                             // For width
 // sample(primary)
-template <typename... Bs>                            
+template <typename... Bs>                    
 bool all(Bs... bs) { return (... && bs); }
 
 bool a = all();

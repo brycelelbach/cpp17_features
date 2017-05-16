@@ -1,5 +1,6 @@
+                                                                              // For width
 // sample(primary)
-template <unsigned N>
+template <unsigned N>                                                         
 std::string repeat(std::string_view s)
 {
     std::string tmp;

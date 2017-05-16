@@ -15,8 +15,13 @@
 </div>
 
 NOTES:
+Before C++17, writing a discriminated union type was not easy.
+
+You could try to do it with `union`, but there's a number of footguns.
 
 ---
+
+<!--
 
 <div class="slide-title">`variant`</div>
 
@@ -34,9 +39,7 @@ NOTES:
 <div class="right">
 </div>
 
-NOTES:
-
----
+-->
 
 <div class="slide-title">`variant`</div>
 
@@ -55,8 +58,13 @@ NOTES:
 </div>
 
 NOTES:
+You need to implement the variant state yourself, since `union` doesn't track it. This can be error prone - if you add a new type to the union, you might forget to add a new enum value.
+
+Also, what happens if you have types with non-trivial constructors or destructors
+in the `union`?
+
 If a `union` contains a type with user-defined constructors and destructors, to
-switch the active member, explicit destructor invocation and placement new are
+switch the active member, placement `new` and explicit destructor invocation are
 usually needed.
 
 ---
@@ -86,6 +94,7 @@ usually needed.
 </div>
 
 NOTES:
+C++17 has a generic implementation of this type of data structure - `std::variant`.
 
 ---
 
@@ -98,7 +107,7 @@ NOTES:
 * Interface is similar to Boost.Variant.
 * Access uses the visitor pattern. 
 
-<table>
+<table style="font-size: 24px;">
 <tr><th style="background: #000; border-top: 0px; border-left: 0px;"></th>
                                     <td>`std::variant<T0, T1, ...>`</td></tr>
 <tr><th>Heap Allocation</th>        <td>No.</td>
@@ -108,6 +117,8 @@ NOTES:
 </table>
 
 NOTES:
+
+{READ SLIDE}
 
 ---
 
@@ -121,6 +132,10 @@ NOTES:
 '></code></pre>
 
 NOTES:
+To access the value of a `variant`, the visitor pattern is frequently used.
+
+You write a visitor - a `Callable` object that can be called with all of the possible
+types of the `variant`'s value..
 
 ---
 
@@ -134,6 +149,8 @@ NOTES:
 '></code></pre>
 
 NOTES:
+Using the `if constexpr` tag dispatching idiom I showed you earlier, we can
+write a generic lambda visitor in-place instead of a struct.
 
 ---
 
@@ -147,6 +164,9 @@ NOTES:
 '></code></pre>
 
 NOTES:
+We can use another C++17 feature - variadic using-declarations - to write a
+helper template class `overloaded` that builds an overload set from a set of
+lambdas.
 
 ---
 
@@ -160,3 +180,6 @@ NOTES:
 '></code></pre>
 
 NOTES:
+`variant` is very useful for writing recursive data structures - for example, a
+binary tree.
+

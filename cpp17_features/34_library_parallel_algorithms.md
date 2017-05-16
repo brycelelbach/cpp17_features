@@ -99,7 +99,7 @@ NOTES:
 <span style="font-family: monospace; display: block;">`template <typename ExecutionPolicy, ...>`&nbsp;&nbsp;&nbsp;&nbsp;
 <span style="font-family: monospace; display: block;">`auto`<i><code> algorithm</code></i>`(ExecutionPolicy&& exec, ...)`;</span>
 
-* `#include <algorithm>`, `<numeric>` and `<execution>`.
+* `#include <algorithm>`, <span style="font-size: 26px; font-family: monospace;" class="hljs-meta language-cpp cpp">&lt;numeric&gt;</span> and <span style="font-size: 26px; font-family: monospace;" class="hljs-meta language-cpp cpp">&lt;execution&gt;</span>.
 * New parallel (e.g. `ExecutionPolicy`) overloads for most of the existing algorithms.
   * `InputIterator` requirements strengthened to `ForwardIterator`.
   * Complexity guarantees relaxed for some algorithms.

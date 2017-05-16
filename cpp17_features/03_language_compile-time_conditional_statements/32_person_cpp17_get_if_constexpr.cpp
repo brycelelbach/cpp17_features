@@ -1,5 +1,6 @@
+                            // For width
 // sample(primary)
-template <std::size_t I>
+template <std::size_t I>    
 auto& get(person& p)
 {
   if constexpr      (I == 0)
@@ -9,4 +10,15 @@ auto& get(person& p)
   else if constexpr (I == 2)
     return p.get_age();
 }
+
+
+
+
+
+
+
+
+
+
 // end-sample
+

@@ -817,7 +817,7 @@
     mode.contains.push(hljs.PHRASAL_WORDS_MODE);
     mode.contains.push({
       className: 'doctag',
-      begin: '(?:TODO|FIXME|NOTE|BUG|XXX):',
+      begin: '(?:TODO|FIXME|NOTE|BUG|XXX|COMPILE ERROR):',
       relevance: 0
     });
     return mode;
@@ -940,20 +940,56 @@ hljs.registerLanguage('cpp', function(hljs) {
     ]
   };
 
+  var OPERATOR = {
+    className: 'operator',
+    begin: '[{}\\[\\]()<>:;.?*+-/%^&|~!=]'
+/*
+         + '|new|delete'
+         + '|and|and_eq|bitand|bitor|compl|not|not_eq'
+         + '|or|or_eq|xor|xor_eq'
+*/
+/*
+    keywords: {
+        'operator-keyword': '{ } [ ] ( ) ' +
+          '< > : :: ; ... ' +
+          'new delete ? . .* ' +
+          '+ - * / % ^ & | ~ ' +
+          '! = += -= *= /= %= ' +
+          '^= &= |= << >> >>= <<= == != ' +
+          '<= >= && || ++ -- , ->* -> ' + 
+          'and and_eq bitand bitor compl not not_eq ' +
+          'or or_eq xor xor_eq '
+    }
+*/
+  };
+
   var FUNCTION_TITLE = hljs.IDENT_RE + '\\s*\\(';
 
   var CPP_KEYWORDS = {
-    keyword: 'int float while private char catch import module export virtual operator sizeof ' +
+    keyword: 'struct class int float while private char catch import module export virtual operator sizeof ' +
       'dynamic_cast|10 typedef const_cast|10 const for static_cast|10 union namespace ' +
       'unsigned long volatile static protected bool template mutable if public friend ' +
       'do goto auto void enum else break extern using asm case typeid ' +
       'short reinterpret_cast|10 default double register explicit signed typename try this ' +
-      'switch continue inline delete alignof constexpr decltype ' +
-      'noexcept static_assert thread_local restrict _Bool complex _Complex _Imaginary ' +
-      'atomic_bool atomic_char atomic_schar ' +
-      'atomic_uchar atomic_short atomic_ushort atomic_int atomic_uint atomic_long atomic_ulong atomic_llong ' +
-      'atomic_ullong new throw return ' +
-      'and or not',
+      'switch continue inline throw return alignof constexpr decltype ' +
+      'noexcept static_assert thread_local restrict _Bool complex _Complex _Imaginary ' + 
+      'new delete and and_eq bitand bitor compl not not_eq or or_eq xor xor_eq',
+//      'atomic_bool atomic_char atomic_schar ' +
+//      'atomic_uchar atomic_short atomic_ushort atomic_int atomic_uint atomic_long atomic_ulong atomic_llong ' +
+//      'atomic_ullong new throw return ' +
+//      'and or not',
+/*
+    built_in: '{ } [ ] ( ) ' +
+      '< > : :: ; ... ' +
+      'new delete ? . .* ' +
+      '+ - * / % ^ & | ~ ' +
+      '! = < > += -= *= /= %= ' +
+      '^= &= |= << >> >>= <<= == != ' +
+      '<= >= && || ++ -- , ->* -> ' + 
+      'and and_eq bitand bitor compl not not_eq ' +
+      'or or_eq xor xor_eq ',
+*/
+/*
     built_in: 'std string cin cout cerr clog stdin stdout stderr stringstream istringstream ostringstream ' +
       'auto_ptr deque list queue stack vector map set bitset multiset multimap unordered_set ' +
       'unordered_map unordered_multiset unordered_multimap array shared_ptr abort abs acos ' +
@@ -963,15 +999,17 @@ hljs.registerLanguage('cpp', function(hljs) {
       'printf putchar puts scanf sinh sin snprintf sprintf sqrt sscanf strcat strchr strcmp ' +
       'strcpy strcspn strlen strncat strncmp strncpy strpbrk strrchr strspn strstr tanh tan ' +
       'vfprintf vprintf vsprintf endl initializer_list unique_ptr',
+*/
     literal: 'true false nullptr NULL'
   };
 
   var EXPRESSION_CONTAINS = [
-    CPP_PRIMITIVE_TYPES,
+//    CPP_PRIMITIVE_TYPES,
     hljs.C_LINE_COMMENT_MODE,
     hljs.C_BLOCK_COMMENT_MODE,
+    OPERATOR,
     NUMBERS,
-    STRINGS
+    STRINGS,
   ];
 
   return {
@@ -980,15 +1018,19 @@ hljs.registerLanguage('cpp', function(hljs) {
     illegal: '</',
     contains: EXPRESSION_CONTAINS.concat([
       PREPROCESSOR,
+/*
       {
         begin: '\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<', end: '>',
         keywords: CPP_KEYWORDS,
         contains: ['self', CPP_PRIMITIVE_TYPES]
       },
+*/
+/*
       {
         begin: hljs.IDENT_RE + '::',
         keywords: CPP_KEYWORDS
       },
+*/
       {
         // This mode covers expression context where we can't expect a function
         // definition and shouldn't highlight anything that looks like one:
@@ -996,7 +1038,7 @@ hljs.registerLanguage('cpp', function(hljs) {
         variants: [
           {begin: /=/, end: /;/},
           {begin: /\(/, end: /\)/},
-          {beginKeywords: 'new throw return else', end: /;/}
+          {beginKeywords: 'throw return else', end: /;/}
         ],
         keywords: CPP_KEYWORDS,
         contains: EXPRESSION_CONTAINS.concat([
@@ -1008,8 +1050,9 @@ hljs.registerLanguage('cpp', function(hljs) {
           }
         ]),
         relevance: 0
-      },
+      }
 /*
+      ,
       {
         className: 'function',
         begin: '(' + hljs.IDENT_RE + '[\\*&\\s]+)+' + FUNCTION_TITLE,
@@ -1042,6 +1085,7 @@ hljs.registerLanguage('cpp', function(hljs) {
         ]
       },
 */
+/*
       {
         className: 'class',
         beginKeywords: 'class struct', end: /[{;:]/,
@@ -1050,6 +1094,7 @@ hljs.registerLanguage('cpp', function(hljs) {
           hljs.TITLE_MODE
         ]
       }
+*/
     ]),
     exports: {
       preprocessor: PREPROCESSOR,

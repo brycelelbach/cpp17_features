@@ -9,5 +9,9 @@ struct mailbox
   // Consumes value.
   template <typename T>
   T retrieve();
+
+ private:
+  std::mutex mtx_;
+  void* ptr_;
 };
 // end-sample

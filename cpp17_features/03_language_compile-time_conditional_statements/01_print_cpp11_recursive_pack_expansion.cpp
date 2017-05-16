@@ -2,7 +2,7 @@
 template <typename T0> 
 void print(T0&& t0)
 {
-  std::cout << std::forward<T0>(t0) << std::endl;
+  std::cout << std::forward<T0>(t0) << "\n";
 } 
 
 template <typename T0, typename... Ts> 

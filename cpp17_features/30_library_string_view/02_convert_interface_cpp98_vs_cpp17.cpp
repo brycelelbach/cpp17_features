@@ -1,10 +1,10 @@
                                                  // For width
 // sample(left)
-int convert(std::string const& s);               
+int to_int(std::string const& s);               
 
-int convert(char const* s);
+int to_int(char const* s);
 
-int convert(my_string const& s);
+int to_int(my_string const& s);
 
 
 
@@ -17,7 +17,7 @@ int convert(my_string const& s);
 
                                                  // For width
 // sample(right)
-int convert(std::string_view s);                 
+int to_int(std::string_view s);                 
 
 
 

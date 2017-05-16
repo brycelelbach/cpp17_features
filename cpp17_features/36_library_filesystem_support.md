@@ -15,6 +15,9 @@
 </div>
 
 NOTES:
+Before C++17, you had to use platform-specific APIs to access the filesystem.
+
+Here's what copying a file and a directory looks like on Windows.
 
 ---
 
@@ -43,6 +46,9 @@ NOTES:
 </div>
 
 NOTES:
+C++17 has a standard filesystem interface.
+
+It's not only portable - it's also more user-friendly.
 
 ---
 
@@ -57,6 +63,7 @@ NOTES:
   * `fs::file_status` - file type and permissions
 
 NOTES:
+{READ FROM SLIDE}
 
 ---
 
@@ -69,8 +76,12 @@ Four major capabilities:
 * File/directory creation, removal and modification.
 
 NOTES:
+{READ FROM SLIDE}
 
 ---
+
+
+<!--
 
 <div class="slide-title">Filesystem Support</div>
 
@@ -88,9 +99,7 @@ NOTES:
 <div class="right">
 </div>
 
-NOTES:
-
----
+-->
 
 <div class="slide-title">Filesystem Support</div>
 
@@ -117,4 +126,7 @@ NOTES:
 </div>
 
 NOTES:
+Here's an example of how to display the contents of a directory with C++17.
+
+Much nicer than the POSIX API!
 

@@ -10,13 +10,20 @@ based on dark.css by Ivan Sagalaev
   overflow-x: auto;
   padding: 0.5em;
 //  background: #3f3f3f;
-  color: #dcdcdc;
+//  color: #dcdcdc;
+  color: #ffffff;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-tag {
-  color: #e3ceab;
+//  color: #e3ceab;
+  color: #00ff00;
+}
+
+.hljs-operator {
+//  color: #00ffff;
+  color: #0066ff;
 }
 
 .hljs-template-tag {
@@ -24,7 +31,8 @@ based on dark.css by Ivan Sagalaev
 }
 
 .hljs-number {
-  color: #8cd0d3;
+//  color: #8cd0d3;
+  color: #ff00ff;
 }
 
 .hljs-variable,
@@ -34,7 +42,8 @@ based on dark.css by Ivan Sagalaev
 }
 
 .hljs-literal {
-  color: #efefaf;
+//  color: #efefaf;
+  color: #ff00ff;
 }
 
 .hljs-subst {
@@ -67,7 +76,10 @@ based on dark.css by Ivan Sagalaev
 .hljs-comment,
 .hljs-quote,
 .hljs-meta {
-  color: #7f9f7f;
+//  color: #7f9f7f;
+//  color: #ff00ff;
+//  color: #999966;
+  color: #996633;
 }
 
 

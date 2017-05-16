@@ -25,15 +25,9 @@ struct mailbox
     std::unique_ptr up(reinterpret_cast<T>(ptr_));
     // No type checks performed. Potential danger!
 
-    if (up)
-      return std::move(up.get());
-    else
-      return T{};
+    if (up) return std::move(up.get());
+    else    return T{};
   }
-
- private:
-  std::mutex mtx_;
-  void* ptr_;
 };
 // end-sample
 
@@ -48,9 +42,6 @@ struct mailbox
     std::lock_guard l(mtx_);
     val_ = std::forward<T>(t);
   }
-
-
-
 
   // Consumes value.
   template <typename T>
@@ -67,11 +58,5 @@ struct mailbox
     else
       return T{};
   }
-
-
-
- private:
-  std::mutex mtx_;
-  std::any val_;
 };
 // end-sample

@@ -15,8 +15,9 @@
 </div>
 
 NOTES:
-
 For alignments above a certain threshold, global new is not guaranteed to allocate aligned memory.
+
+Before C++17, you had to use low-level platform-specific APIs to truly ensure your memory allocations were aligned.
 
 ---
 
@@ -45,6 +46,7 @@ For alignments above a certain threshold, global new is not guaranteed to alloca
 </div>
 
 NOTES:
+C++17 has aligned allocation support. You can control the alignment with `alignas`.
 
 ---
 
@@ -90,4 +92,5 @@ void operator delete[](void*, std::align_val_t, std::size_t);
   * Global and alignment-aware `new`.
 
 NOTES:
+{READ FROM SLIDE}
 

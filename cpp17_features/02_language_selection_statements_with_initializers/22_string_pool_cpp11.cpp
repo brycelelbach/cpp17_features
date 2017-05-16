@@ -13,7 +13,8 @@ std::string string_pool::pop(std::size_t new_cap)
     }
   }
 
-  s.reserve(new_cap);
+  if (s.capacity() < new_cap)
+    s.reserve(new_cap);
 
 
   return s;

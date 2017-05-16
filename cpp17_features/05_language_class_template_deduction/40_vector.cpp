@@ -12,6 +12,6 @@ std::vector f8({0, 1, 1, 2, 3, 5, 8, 13}); // Uses automatic deduction.
 
 auto it = f8.begin();
 
-std::vector f4(it, it + 3);                // Uses deduction guide.
+std::vector f4(it, it + 4);                // Uses deduction guide.
 // end-sample
 

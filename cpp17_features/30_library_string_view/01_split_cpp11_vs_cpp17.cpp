@@ -32,6 +32,7 @@ split(std::string const& s,
 
   return v;
 }
+
 // end-sample
 
 }

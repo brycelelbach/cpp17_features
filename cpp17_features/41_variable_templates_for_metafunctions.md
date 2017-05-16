@@ -1,3 +1,5 @@
+<!--
+
 <div class="slide-title">Variable Templates for Metafunctions</div>
 
 <div class="left">
@@ -14,9 +16,7 @@
 <div class="right">
 </div>
 
-NOTES:
-
----
+-->
 
 <div class="slide-title">Variable Templates for Metafunctions</div>
 
@@ -43,12 +43,13 @@ NOTES:
 </div>
 
 NOTES:
+C++17 adds variable templates for all type traits and metafunctions in the standard library.
 
 ---
 
 <div class="slide-title">Variable Templates for Metafunctions</div>
 
-<span style="font-family: monospace; display: block;">`template <...>`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span style="font-family: monospace; display: block;">`template <...>`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span style="font-family: monospace; display: block;">`bool constexpr` *`trait`*`_v =` *`trait`*`<...>::value;`</span>
 
 * `#include <type_traits>`
@@ -56,4 +57,5 @@ NOTES:
 * Defined for all the type traits: `is_*`, etc.
 
 NOTES:
- 
+{READ FROM SLIDES}
+

@@ -1,6 +1,6 @@
                                         // For width
 // sample(left)
-std::lock_guard<std::mutex>             
+auto                                    
 grab_lock(std::mutex& m)
 {
   return std::lock_guard<std::mutex>(m);
@@ -16,10 +16,10 @@ auto guard = grab_lock(mtx);
 
                                         // For width
 // sample(right)
-std::lock_guard<std::mutex>             
+auto                                    
 grab_lock(std::mutex& m)
 {
-  return std::lock_guard<std::mutex>(m);
+  return std::lock_guard(m);
 }
 
 

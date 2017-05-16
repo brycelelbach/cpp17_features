@@ -3,7 +3,7 @@
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
-<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
+<pre style="display: inline-block;"><code class='sample' style="font-size: 0.5em;" sample='cpp17_features/
 37_polymorphic_allocators_and_memory_resources
 /
 00_vector_allocators.cpp
@@ -25,7 +25,7 @@ constructs.
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
-<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
+<pre style="display: inline-block;"><code class='sample' style="font-size: 0.5em;" sample='cpp17_features/
 37_polymorphic_allocators_and_memory_resources
 /
 00_vector_allocators.cpp
@@ -36,7 +36,7 @@ constructs.
 <div class="right">
 <span style="display: block">__**C++17**__</span>
 
-<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
+<pre style="display: inline-block;"><code class='sample' style="font-size: 0.5em;" sample='cpp17_features/
 37_polymorphic_allocators_and_memory_resources
 /
 00_vector_allocators.cpp
@@ -57,7 +57,7 @@ adapter for the global allocator.
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
-<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
+<pre style="display: inline-block;"><code class='sample' style="font-size: 0.5em;" sample='cpp17_features/
 37_polymorphic_allocators_and_memory_resources
 /
 00_vector_allocators.cpp
@@ -68,7 +68,7 @@ adapter for the global allocator.
 <div class="right">
 <span style="display: block">__**C++17**__</span>
 
-<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
+<pre style="display: inline-block;"><code class='sample' style="font-size: 0.5em;" sample='cpp17_features/
 37_polymorphic_allocators_and_memory_resources
 /
 00_vector_allocators.cpp
@@ -78,12 +78,16 @@ adapter for the global allocator.
 
 NOTES:
 
+The `std::pmr` namespace has aliases for STL constructs that use
+`std::pmr::polymorphic_allocator` instead of `std::allocator` by default.
+
 ---
 
 <div class="slide-title">Polymorphic Allocators and Memory Resources</div>
 
 * `#include <memory_resource>`
 * `std::pmr::polymorphic_allocator` is a type-erasing allocator wrapping an object that implements the `std::pmr::memory_resource` interface.
+* `std::pmr` allocator-aware STL aliases.
 * Standard `std::pmr::memory_resource`s:
   * `std::pmr::new_delete_resource` - global `new`/`delete`.
   * `std::pmr::unsynchronized_pool_resource` - thread-unsafe pool.
@@ -91,4 +95,6 @@ NOTES:
   * `std::pmr::monotonic_buffer_resource` - memory is only released when the resource goes out of scope.
 
 NOTES:
+
+{READ FROM SLIDE}
 

@@ -1,7 +1,7 @@
 <div class="slide-title">Unary `static_assert`</div>
 
 <div class="left">
-<span style="display: block">__**C++14**__</span>
+<span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
 10_language_unary_static_assert
@@ -15,13 +15,15 @@
 </div>
 
 NOTES:
+Before C++17, `static_assert` required you to give it a failure message, unlike
+`assert`.
 
 ---
 
 <div class="slide-title">Unary `static_assert`</div>
 
 <div class="left">
-<span style="display: block">__**C++14**__</span>
+<span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
 10_language_unary_static_assert
@@ -43,4 +45,5 @@ NOTES:
 </div>
 
 NOTES:
+In C++17, the failure message is optional.
 

@@ -8,5 +8,10 @@
 '></code></pre>
 
 NOTES:
+C++17 adds a new preprocessor predicate, `__has_include`, which can be used to
+test if a header includes.
 
+This can be useful when searching for "optional dependencies". 
+
+TRANSITION: Speaking of `std::string_view`.
 

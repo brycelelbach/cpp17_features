@@ -13,8 +13,9 @@ std::string string_pool::pop(std::size_t new_cap)
   }
 
 
-  s.reserve(new_cap); // Unnecessary contention.
-                      // mtx_ still locked.
+  if (s.capacity() < new_cap)
+    s.reserve(new_cap); // Unnecessary contention.
+                        // mtx_ still locked.
 
   return s;
 }

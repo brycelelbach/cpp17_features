@@ -15,6 +15,10 @@
 </div>
 
 NOTES:
+Let's say we want to write a function like `first_3`, which "filters" a `string`,
+and returns a new `string`.
+
+This is awful! We're making an expensive copy here that may be unnecessary.
 
 ---
 
@@ -43,6 +47,7 @@ NOTES:
 </div>
 
 NOTES:
+We can use `string_view` instead!
 
 ---
 
@@ -54,8 +59,9 @@ NOTES:
 * A non-owning view of a string.
 * Interface is mostly the same as `std::string`; it is often a drop-in replacement.
 
-<table>
-<tr><th></th>                   <td>`std::string`</td>     <td>`std::string_view`</td></tr>
+<table style="font-size: 24px;">
+<tr><th style="background: #000; border-top: 0px; border-left: 0px;"></th>
+                                <td>`std::string`</td>     <td>`std::string_view`</td></tr>
 <tr><th>Heap Allocation</th>    <td>Yes.</td>              <td>No.</td>
 <tr><th>Ownership Semantics</th><td>Owns its contents.</td><td>Non-owning (pointer + length).</td></tr>
 <tr><th>Copying</th>            <td>Expensive.</td>        <td>Cheap.</td></tr>
@@ -64,8 +70,11 @@ NOTES:
 </table>
 
 NOTES:
+{READ SLIDE}
 
 ---
+
+<!--
 
 <div class="slide-title">`string_view`</div>
 
@@ -83,9 +92,7 @@ NOTES:
 <div class="right">
 </div>
 
-NOTES:
-
----
+-->
 
 <div class="slide-title">`string_view`</div>
 
@@ -112,6 +119,11 @@ NOTES:
 </div>
 
 NOTES:
+Take a look at these two implementations of string splitting.
+
+The `string` one will create a bunch of new strings.
+
+The `string_view` version creates a vector of views into the original input.
 
 ---
 
@@ -140,4 +152,13 @@ NOTES:
 </div>
 
 NOTES:
+`string_view` simplifies your interfaces.
+
+It can be the one common string type that your interfaces accept, instead of
+having overloads for C-style strings, `std::string`, your in-house string class,
+etc.
+
+For example, `string_view` simplifies this `to_int` interface.
+
+TRANSITION: Let's take a look at this `to_int` example in a little more detail.
 

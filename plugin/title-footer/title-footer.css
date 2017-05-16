@@ -16,7 +16,7 @@
 	opacity: 1;
 	transition: opacity 800ms ease-in-out;
 	position: fixed;
-	height: 2vh;
+	height: 3vh;
 	z-index: 20;
 	width: 100%;
 	font-size: 2vh;
@@ -24,6 +24,11 @@
 	letter-spacing: 0em;
 	padding-top: 0.5vh;
 	padding-bottom: 0.5vh;
+}
+
+#title-footer code
+{
+    font-size: 1.8vh;
 }
 
 /* Bottom position for the Title-Footer footer when both progress bar and TOC-Progress are visible */

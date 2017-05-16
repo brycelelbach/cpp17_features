@@ -3,14 +3,66 @@
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
 33_library_any
 /
-00_mailbox_interface.cpp
+10_vector_any.cpp
 #primary
 '></code></pre>
 
 NOTES:
-What do we do if we need a any, but we don't know the types at compile time?
+
+What do we do if we need a `variant`, but we don't know the types at compile time?
+
+Or what if we want a heterogeneous `vector`?
+
+C++17 adds a generalized type-erasure facility, `any`.
 
 ---
+
+<div class="slide-title">`any`</div>
+
+`std::any`
+
+* `#include <any>`
+* Type-erasure for copyable objects. 
+* Four main operations:
+  * Copy it. 
+  * Assign a value of some type `T` (`operator=`).
+  * Ask whether it contains a value of some type `T` (`.type`).
+  * Retrieve a value of some type `T` (`any_cast<>`).
+
+<table style="font-size: 24px;">
+<tr><th style="background: #000; border-top: 0px; border-left: 0px;"></th>
+                                    <td>`std::any`</td></tr>
+<tr><th>Heap Allocation</th>        <td>Yes.</td>
+<tr><th>Ownership Semantics</th>    <td>Owns its contents.</td></tr>
+<tr><th>Cost of Copying</th>        <td>Same as the contained type.</td></tr>
+<tr><th>Passing Style</th>          <td>By reference.</td></tr>
+</table>
+
+NOTES:
+
+{READ FROM SLIDE}
+
+`std::any` is nice tool for implementing type-erasure as well as heterogeneous
+types.
+
+<!--
+
+<div class="slide-title">`any`</div>
+
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
+33_library_any
+/
+00_mailbox_interface.cpp
+#primary
+'></code></pre>
+
+XXXXX::
+What do we do if we need a `variant`, but we don't know the types at compile time?
+
+What we need is type erasure.
+
+For example, let's say we wanted to implement a type-erased thread-safe mailbox -
+a place where a producer can put a value and consumer can get a value.
 
 <div class="slide-title">`any`</div>
 
@@ -28,10 +80,6 @@ What do we do if we need a any, but we don't know the types at compile time?
 <div class="right">
 </div>
 
-NOTES:
-
----
-
 <div class="slide-title">`any`</div>
 
 <div class="left">
@@ -47,11 +95,6 @@ NOTES:
 
 <div class="right">
 </div>
-
-NOTES:
-Manual memory management is bad!
-
----
 
 <div class="slide-title">`any`</div>
 
@@ -69,9 +112,8 @@ Manual memory management is bad!
 <div class="right">
 </div>
 
-NOTES:
-
----
+XXXXX:
+Before C++17, we could implement this manually with `void*`, but it's not pretty.
 
 <div class="slide-title">`any`</div>
 
@@ -97,41 +139,4 @@ NOTES:
 '></code></pre>
 </div>
 
-NOTES:
-
----
-
-<div class="slide-title">`any`</div>
-
-`std::any`
-
-* `#include <any>`
-* Type-erasure for copyable objects. 
-* Four main operations:
-  * Copy it. 
-  * Assign a value of some type `T` (`operator=`).
-  * Ask whether it contains a value of some type `T` (`.type`).
-  * Retrieve a value of some type `T` (`any_cast<>`).
-
-<table>
-<tr><th style="background: #000; border-top: 0px; border-left: 0px;"></th>
-                                    <td>`std::any`</td></tr>
-<tr><th>Heap Allocation</th>        <td>Yes.</td>
-<tr><th>Ownership Semantics</th>    <td>Owns its contents.</td></tr>
-<tr><th>Cost of Copying</th>        <td>Same as the contained type.</td></tr>
-<tr><th>Passing Style</th>          <td>By reference.</td></tr>
-</table>
-
-NOTES:
-
----
-
-<div class="slide-title">`any`</div>
-
-<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-33_library_any
-/
-10_vector_any.cpp
-#primary
-'></code></pre>
-
+-->

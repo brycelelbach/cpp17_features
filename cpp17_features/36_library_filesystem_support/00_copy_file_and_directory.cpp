@@ -16,6 +16,7 @@ s.fFlags = FOF_SILENT;
 s.pFrom = dir.c_str();
 s.pTo = dir_copy.c_str();
 SHFileOperation(&s);
+
 // end-sample
 
                                        // For width
@@ -35,6 +36,7 @@ dir_copy += ".bak";
 
 
 
-fs::copy(dir, dir_copy, fs::copy_options::recursive);
+fs::copy(dir, dir_copy,
+         fs::copy_options::recursive);
 // end-sample
 

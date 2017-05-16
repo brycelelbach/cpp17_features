@@ -1,6 +1,6 @@
                                                           // For width
 // sample(primary)
-struct string_pool                                        
+struct string_pool
 {
   std::string pop(std::size_t new_cap);
   // ... 

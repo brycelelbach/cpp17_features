@@ -1,5 +1,6 @@
+                                                                              // For width
 // sample(primary)
-template <unsigned N>
+template <unsigned N>                                                         
 std::string repeat(std::string_view s);
 
 template <typename... Ts>
@@ -23,4 +24,7 @@ std::visit(
     [=](int& t)                { t = t * N; },
     [=](std::array<int, 2>& t) { t = {{t[0] * N, t[1] * N}}; }
   }, v);
+
+
+
 // end-sample

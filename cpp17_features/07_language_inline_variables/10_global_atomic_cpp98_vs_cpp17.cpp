@@ -1,6 +1,6 @@
-                                         // Text width
+                                                // Text width
 // sample(left)
-// In header (.hpp):                     
+// In header (.hpp):                            
 
 
 extern std::atomic<bool> ready;
@@ -10,9 +10,9 @@ extern std::atomic<bool> ready;
 std::atomic<bool> ready = false;
 // end-sample
 
-                                         // Text width
+                                                // Text width
 // sample(right)
-                                         
+                                                
 
 
 inline std::atomic<bool> ready = false;

@@ -1,6 +1,6 @@
                                                    // For width
 // sample(primary)
-std::optional<int> convert(std::string_view s)     
+std::optional<int> to_int(std::string_view s)     
 {
   std::optional<int> oi;
   int i;

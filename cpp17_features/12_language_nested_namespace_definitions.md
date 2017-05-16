@@ -13,4 +13,5 @@
 </div>
 
 NOTES:
+In C++17, you can declare nested namespaces.
 

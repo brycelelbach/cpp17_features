@@ -1,10 +1,11 @@
-                                                     // Text width
+                                   // Text width
 // sample(primary) 
-template <auto  v>                                   
+template <auto v>                  
 struct constant
 {
-  static constexpr auto  value = v;
+  static constexpr auto value = v;
 };
+
 
 
 using i = constant<2048>;
