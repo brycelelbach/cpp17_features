@@ -44,5 +44,7 @@ Material from:
 </p>
 </i>
 
+[brycelelbach.github.io/cpp17_features](https://brycelelbach.github.io/cpp17_features/)
+
 NOTES:
 
