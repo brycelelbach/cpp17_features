@@ -1,13 +1,14 @@
                                          // Text width
 // sample(primary) 
-template <std::size_t... Dims>           
-struct dimensions;
+template <typename T, std::size_t Extent>
+struct span;
 
 
 
 constexpr std::size_t dyn = -1;
 
 
-dimensions<64, dyn, 32> d;
+span<double, 64>  d;
+span<int, dyn>    i;
 // end-sample
 

@@ -159,7 +159,7 @@ And here's the C++17 implementation in one function, using `if constexpr` and `i
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/03_language_compile-time_conditional_statements/30_person.cpp#primary'></code></pre>
 
 NOTES:
-Let's say we have some `person` struct and we want to non-intrusively make it `Destructurable` by implementing a free `get` template function.
+Let's say we have some `person` struct and we want to non-intrusively make it `Destructurable` by implementing a global `get` template function.
 
 ---
 
@@ -175,7 +175,7 @@ Let's say we have some `person` struct and we want to non-intrusively make it `D
 </div>
 
 NOTES:
-Before C++17, you might write an implementation like this that uses template specialization.
+Before C++17, you might write an implementation like this, using explicit specializations.
 
 ---
 

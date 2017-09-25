@@ -111,6 +111,8 @@ NOTES:
 
 ---
 
+<div class="slide-title">Parallel Algorithms</div>
+
 <span style="font-family: monospace; display: block;">`template <typename ExecutionPolicy, ...>`&nbsp;&nbsp;&nbsp;&nbsp;
 <span style="font-family: monospace; display: block;">`auto`<i><code> algorithm</code></i>`(ExecutionPolicy&& exec, ...)`;</span>
 
@@ -122,8 +124,8 @@ NOTES:
   * How should that work be queued?
 * Execution policies:
   * `std::seq`: Serial.
-  * `std::par`: Parallel (SIMT, ex: NVIDIA GPUs).
-  * `std::par_unseq`: Parallel and unordered (SIMT and SIMD, ex: NVIDIA GPUs and Intel CPUs).
+  * `std::par`: Parallel (SIMT).
+  * `std::par_unseq`: Parallel and unordered (SIMT and SIMD).
 
 NOTES:
   
@@ -132,6 +134,8 @@ NOTES:
 * `std::par_unseq`: operations unsequenced with respect to each other and possibly interleaved.
 
 ---
+
+<div class="slide-title">Parallel Algorithms</div>
 
 <div class="left">
 <span style="display: block">__**Serial**__</span>
@@ -206,6 +210,8 @@ NOTES:
 NOTES:
 
 ---
+
+<div class="slide-title">Parallel Algorithms</div>
 
 <div class="left">
 <span style="display: block">__**Serial**__</span>

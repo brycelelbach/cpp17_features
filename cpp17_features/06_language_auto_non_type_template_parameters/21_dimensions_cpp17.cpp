@@ -1,13 +1,14 @@
                                          // Text width
 // sample(primary) 
-template <auto... Dims>                  
-struct dimensions;
+template <typename T, auto Extent>       
+struct span;
 
 
 struct dynamic_extent {};
 constexpr dynamic_extent dyn = {};
 
 
-dimensions<64, dyn, 32> d;
+span<double, 64>  d;
+span<int, dyn>    i;
 // end-sample
 

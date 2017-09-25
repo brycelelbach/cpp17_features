@@ -9,4 +9,7 @@ struct person
   std::string   name_;
   std::uint16_t age_;
 };
+
+template <std::size_t I>
+auto& get(person& p);
 // end-sample 

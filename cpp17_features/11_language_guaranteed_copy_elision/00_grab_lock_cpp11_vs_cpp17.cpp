@@ -1,7 +1,6 @@
                                         // For width
 // sample(left)
-auto                                    
-grab_lock(std::mutex& m)
+auto grab_lock(std::mutex& m)           
 {
   return std::lock_guard<std::mutex>(m);
   // COMPILE ERROR: Copy or move ctor
@@ -16,8 +15,7 @@ auto guard = grab_lock(mtx);
 
                                         // For width
 // sample(right)
-auto                                    
-grab_lock(std::mutex& m)
+auto grab_lock(std::mutex& m)           
 {
   return std::lock_guard(m);
 }

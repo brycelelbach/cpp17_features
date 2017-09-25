@@ -97,6 +97,26 @@ If we return an uninitialized `int`, we might get garbage.
 
 <div class="slide-title">`optional`</div>
 
+<pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
+31_library_optional
+/
+05_depend.cpp
+#primary
+'></code></pre>
+
+NOTES:
+We can also use `optional` when dealing with non-`DefaultConstructible` types!
+
+For example, here's a function from a project of mine that retrieves a value from a future using `.then`.
+
+The lambda passed to `.then` stores the value of the future (which is the argument of the lambda) in a variable in the outer scope (`r`) that is captured by reference.
+
+If `r` wasn't an `optional`, this code would break for non-`DefaultConstructible` types.
+
+---
+
+<div class="slide-title">`optional`</div>
+
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
