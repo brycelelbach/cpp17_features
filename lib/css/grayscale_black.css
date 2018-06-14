@@ -1,0 +1,36 @@
+.hljs
+{
+  color: #FFF;
+}
+
+.hljs-operator
+{
+  color: #CCC;
+  font-weight: bold;
+}
+
+.hljs-keyword
+{
+  color: #BBB;
+  font-weight: bold;
+}
+
+.hljs-comment,
+.hljs-quote
+{
+  color: #DDA;
+  font-style: italic;
+}
+
+.hljs-meta 
+{
+  color: #DDA;
+}
+
+.hljs-string,
+.hljs-number,
+.hljs-literal
+{
+  color: #ADD;
+}
+

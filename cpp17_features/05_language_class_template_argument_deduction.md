@@ -1,10 +1,10 @@
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 00_tuple.cpp
 #0
@@ -23,13 +23,13 @@ However, no such deduction has existed for class templates. Until now!
 
 ---
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 00_tuple.cpp
 #0
@@ -40,7 +40,7 @@ However, no such deduction has existed for class templates. Until now!
 <span style="display: block">__**C++17**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 00_tuple.cpp
 #1
@@ -54,13 +54,13 @@ They can be deduced in declarations and function-style casts, as shown here.
 
 <!--
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 01_tuple_new.cpp
 #0
@@ -74,13 +74,13 @@ They can be deduced in declarations and function-style casts, as shown here.
 
 ---
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 01_tuple_new.cpp
 #0
@@ -91,7 +91,7 @@ They can be deduced in declarations and function-style casts, as shown here.
 <span style="display: block">__**C++17**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 01_tuple_new.cpp
 #1
@@ -105,13 +105,13 @@ Class template parameters can also be deduced in `new` expressions.
 
 <!--
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 10_greater.cpp
 #0
@@ -121,13 +121,13 @@ Class template parameters can also be deduced in `new` expressions.
 <div class="right">
 </div>
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 10_greater.cpp
 #0
@@ -138,7 +138,7 @@ Class template parameters can also be deduced in `new` expressions.
 <span style="display: block">__**C++17**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 10_greater.cpp
 #1
@@ -149,13 +149,13 @@ Class template parameters can also be deduced in `new` expressions.
 
 <!--
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 30_lock_guard.cpp
 #0
@@ -167,13 +167,13 @@ Class template parameters can also be deduced in `new` expressions.
 
 -->
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <div class="left">
 <span style="display: block">__**Before**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 30_lock_guard.cpp
 #0
@@ -184,7 +184,7 @@ Class template parameters can also be deduced in `new` expressions.
 <span style="display: block">__**C++17**__</span>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 30_lock_guard.cpp
 #1
@@ -197,7 +197,7 @@ as Resource Acquisition is Initialization (RAII).
 
 ---
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 * Class template parameters can now be deduced in:
   * Declarations.
@@ -212,7 +212,7 @@ NOTES:
 
 ---
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <!--
 <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*`template_name`* `(`*`param0`*`, ...) ->` *`template_name`*`<...>;`</span>
@@ -241,10 +241,10 @@ Let me show you an example.
 
 ---
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 40_vector.cpp
 #0
@@ -257,10 +257,10 @@ type from the iterator arguments.
 
 ---
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 50_name.cpp
 #0
@@ -276,10 +276,10 @@ NEXT: `auto` Non-Type Template Parameters.
 
 <!--
 
-<div class="slide-title">Class Template Deduction</div>
+<div class="slide-title">Class Template Argument Deduction (CTAD)</div>
 
 <pre style="display: inline-block;"><code class='sample' sample='cpp17_features/
-05_language_class_template_deduction
+05_language_class_template_argument_deduction
 /
 60_overloaded.cpp
 #0

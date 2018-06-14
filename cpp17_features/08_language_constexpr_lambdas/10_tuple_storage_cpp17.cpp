@@ -2,7 +2,7 @@
 template <typename... Xs>
 constexpr auto make_storage(Xs... xs)
 {
-  auto storage = [=](auto f) { return f(xs...); };
+  auto storage = [=] (auto f) { return f(xs...); };
   return storage;
 }
 

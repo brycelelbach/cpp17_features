@@ -4,12 +4,12 @@
 <p>&nbsp;</p>
 
 <p style="font-size: 24px;">
-**Bryce Adelstein Lelbach &lt;[bryce@cppcon.org](mailto:bryce@cppcon.org)&gt;**
+**Bryce Adelstein Lelbach &lt;[brycelelbach@gmail.com](mailto:brycelelbach@gmail.com)&gt;**
 </p>
 
 <i>
 <p style="font-size: 18px;">
-Material from:
+Contributors:
 </p>
 
 <p style="font-size: 18px;">
@@ -47,7 +47,7 @@ Material from:
 <p>&nbsp;</p>
 
 <p>
-<small>Presented at [CppCon 2017](https://cppcon.org). Copyright (C) 2017.</small>
+<small>Copyright (C) 2017-2018</small>
 </p>
 
 NOTES:

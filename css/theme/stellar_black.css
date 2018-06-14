@@ -23,7 +23,8 @@ body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 30px;
   font-weight: normal;
-  color: #fff; }
+  color: #fff;
+}
 
 ::selection {
   color: #fff;
@@ -171,7 +172,7 @@ body {
   display: block;
 //  padding: 5px;
   overflow: auto;
-  font-size: 0.55em;
+  font-size: 0.6em;
 //  max-height: 400px;
   word-wrap: normal;
 }
